@@ -1,0 +1,1110 @@
+{
+	"info": {
+		"_postman_id": "8c3d3f2f-64fd-428e-8b08-94352063bfb8",
+		"name": "Test Alkemy java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18237981"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"andre\",\r\n    \"email\": \"andre@mail.com\",\r\n    \"password\": \"andre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Endpoint para registrar una cuenta"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"andre@mail.com\",\r\n    \"password\": \"andre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Test grupo 1: Happy Path",
+			"item": [
+				{
+					"name": "Crear género 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \t\"Musical\",\r\n    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/genres/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genres",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear género 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"nombre\": \"drama\",\r\n    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/genres/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genres",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear género 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \t\"aventuras\",\r\n    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/genres/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genres",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear género 4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \t\"familiar\",\r\n    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/genres/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genres",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear película 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"imagen\": \"https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg\",\r\n        \"titulo\": \"El rey leon 1\",\r\n        \"fechaDeCreacion\": \"24/06/1994\",\r\n        \"calificacion\": 8.5,\r\n        \"personajes\": null,\r\n         \"generos\":[\r\n            {\r\n            \"id\": 1,\r\n            \"nombre\": \"Musical\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n            },\r\n            {\r\n            \"id\": 2,\r\n            \"nombre\": \"drama\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n            },\r\n            {\r\n            \"id\": 3,\r\n            \"nombre\": \"aventuras\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n            },\r\n            {\r\n            \"id\": 4,\r\n            \"nombre\": \"familiar\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n            }\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear película 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"imagen\": \"https://m.media-amazon.com/images/M/MV5BNTgxMWYwY2EtMGY4MS00MmRjLTg1MGQtMWU3MzgzMDA4ODQ2XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_.jpg\",\r\n        \"titulo\": \"El rey leon 2\",\r\n        \"fechaDeCreacion\": \"10/27/1998\",\r\n        \"calificacion\": 6.4,\r\n        \"personajes\": null,\r\n         \"generos\":[\r\n            {\r\n            \"id\": 1,\r\n            \"nombre\": \t\"Musical\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        },\r\n        {\r\n             \"id\": 2,\r\n            \"nombre\": \t\"drama\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        },\r\n        {\r\n             \"id\": 3,\r\n            \"nombre\": \t\"aventuras\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        },\r\n        {\r\n             \"id\": 4,\r\n            \"nombre\": \t\"familiar\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        }\r\n        \r\n        ]\r\n        \r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear película 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"imagen\": \"https://m.media-amazon.com/images/M/MV5BOGZiMDQ1YTQtMGVlOC00OTJiLWFkYzMtYjdiYmY0NWM5YzVjXkEyXkFqcGdeQXVyOTg4MDk3MTQ@._V1_FMjpg_UX1000_.jpg\",\r\n        \"titulo\": \"El rey leon 3\",\r\n        \"fechaDeCreacion\": \"9/2/2004\",\r\n        \"calificacion\": 6.5,\r\n         \"personajes\": null,\r\n         \"generos\":[\r\n            {\r\n            \"id\": 1,\r\n            \"nombre\": \t\"Musical\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        },\r\n        {\r\n             \"id\": 2,\r\n            \"nombre\": \t\"drama\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        },\r\n        {\r\n             \"id\": 3,\r\n            \"nombre\": \t\"aventuras\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        },\r\n        {\r\n             \"id\": 4,\r\n            \"nombre\": \t\"familiar\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        }\r\n        \r\n        ]\r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear película 4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"imagen\": \"https://pics.filmaffinity.com/The_King-667267991-mmed.jpg\",\r\n        \"titulo\": \"El rey (2019)\",\r\n        \"fechaDeCreacion\": \"01/11/2001\",\r\n        \"calificacion\": 7.3,\r\n         \"personajes\": null,\r\n         \"generos\":[\r\n        {\r\n             \"id\": 2,\r\n            \"nombre\": \t\"drama\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n        }        \r\n        ]\r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear personaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagen\": \"https://static.wikia.nocookie.net/disney/images/e/e5/Mufasa.png/revision/latest?cb=20141108101609&path-prefix=es\",\r\n    \"nombre\": \"Mufasa\",\r\n    \"edad\": 20,\r\n    \"peso\": 40.5,\r\n    \"historia\": \"Mufasa fue el primer hijo y heredero del Rey Ahadi y de la Reina Uru, según lo evidenciado en un juego de libros de precuela lanzados después de The Lion King.\",\r\n    \"peliculas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"imagen\": \"https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg\",\r\n            \"titulo\": \"El rey leon 1\",\r\n            \"fechaDeCreacion\": \"24/06/1994\",\r\n            \"calificacion\": 8.5,\r\n            \"generos\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Musical\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"drama\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 3,\r\n                    \"nombre\": \"aventuras\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 4,\r\n                    \"nombre\": \"familiar\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"imagen\": \"https://m.media-amazon.com/images/M/MV5BNTgxMWYwY2EtMGY4MS00MmRjLTg1MGQtMWU3MzgzMDA4ODQ2XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_.jpg\",\r\n            \"titulo\": \"El rey leon 2\",\r\n            \"fechaDeCreacion\": \"10/27/1998\",\r\n            \"calificacion\": 6.4,\r\n            \"generos\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Musical\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"drama\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 3,\r\n                    \"nombre\": \"aventuras\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 4,\r\n                    \"nombre\": \"familiar\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"imagen\": \"https://m.media-amazon.com/images/M/MV5BOGZiMDQ1YTQtMGVlOC00OTJiLWFkYzMtYjdiYmY0NWM5YzVjXkEyXkFqcGdeQXVyOTg4MDk3MTQ@._V1_FMjpg_UX1000_.jpg\",\r\n            \"titulo\": \"El rey leon 3\",\r\n            \"fechaDeCreacion\": \"9/2/2004\",\r\n            \"calificacion\": 6.5,\r\n            \"generos\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Musical\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"drama\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 3,\r\n                    \"nombre\": \"aventuras\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 4,\r\n                    \"nombre\": \"familiar\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								""
+							]
+						},
+						"description": "Datos de un personaje"
+					},
+					"response": []
+				},
+				{
+					"name": "Listado de los personajes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							]
+						},
+						"description": "Listado con el nombre y la imagen de todos los personajes"
+					},
+					"response": []
+				},
+				{
+					"name": "Detalles de personaje 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters/details/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda de personajes por nombre y edad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/?name=Mufasa&age=25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Mufasa"
+								},
+								{
+									"key": "age",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda de personajes por nombre y peso",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/?name=Mufasa&weight=40.5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Mufasa"
+								},
+								{
+									"key": "weight",
+									"value": "40.5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda de personajes por nombre y pelicula",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/?name=Mufasa&movies=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Mufasa"
+								},
+								{
+									"key": "movies",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalles de películas 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/details/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda por título y género",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/?name=El rey leon&genre=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "El rey leon"
+								},
+								{
+									"key": "genre",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda por título y género, orden ASC",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/?name=El rey leon&genre=1&order=ASC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "El rey leon"
+								},
+								{
+									"key": "genre",
+									"value": "1"
+								},
+								{
+									"key": "order",
+									"value": "ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda por titulo y genero, orden DESC",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/?name=El rey leon&genre=1&order=DESC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "El rey leon"
+								},
+								{
+									"key": "genre",
+									"value": "1"
+								},
+								{
+									"key": "order",
+									"value": "DESC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta con test para el endpoint /characters",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Test grupo 2: Unhappy Path",
+			"item": [
+				{
+					"name": "Crear genero 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": null,\r\n    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/genero/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genero",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear genero 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \t\"\",\r\n    \"imagen\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/genero/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genero",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear pelicula 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"imagen\": \"\",\r\n        \"titulo\": \"El rey leon 1\",\r\n        \"fechaDeCreacion\": null,\r\n        \"calificacion\": 8.5,\r\n        \"personajes\": null,\r\n         \"generos\":[\r\n            {\r\n            \"id\": 1,\r\n            \"nombre\": \"Musical\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n            },\r\n            {\r\n            \"id\": 2,\r\n            \"nombre\": \"drama\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n            },\r\n            {\r\n            \"id\": 3,\r\n            \"nombre\": \"aventuras\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n            },\r\n            {\r\n            \"id\": 4,\r\n            \"nombre\": \"familiar\",\r\n            \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n            }\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear pelicula 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"imagen\": null,\r\n        \"titulo\": null,\r\n        \"fechaDeCreacion\": null,\r\n        \"calificacion\": 0,\r\n        \"personajes\": null,\r\n        \"generos\":null\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear personaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"imagen\": \"\",\r\n    \"nombre\": \"\",\r\n    \"edad\": null,\r\n    \"peso\": null,\r\n    \"historia\": \"Mufasa fue el primer hijo y heredero del Rey Ahadi y de la Reina Uru, según lo evidenciado en un juego de libros de precuela lanzados después de The Lion King.\",\r\n    \"peliculas\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								""
+							]
+						},
+						"description": "Datos de un personaje"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar personaje 1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"imagen\": null,\r\n    \"nombre\": \"Mufasa\",\r\n    \"edad\": 20,\r\n    \"peso\": 40.5,\r\n    \"historia\": \"Mufasa fue el primer hijo y heredero del Rey Ahadi y de la Reina Uru, según lo evidenciado en un juego de libros de precuela lanzados después de The Lion King.\",\r\n    \"peliculas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"imagen\": \"https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg\",\r\n            \"titulo\": \"El rey leon 1\",\r\n            \"fechaDeCreacion\": \"24/06/1994\",\r\n            \"calificacion\": 8.5,\r\n            \"personajes\": null,\r\n            \"generos\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Musical\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"drama\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 3,\r\n                    \"nombre\": \"aventuras\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 4,\r\n                    \"nombre\": \"familiar\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"imagen\": \"https://m.media-amazon.com/images/M/MV5BNTgxMWYwY2EtMGY4MS00MmRjLTg1MGQtMWU3MzgzMDA4ODQ2XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_.jpg\",\r\n            \"titulo\": \"El rey leon 2\",\r\n            \"fechaDeCreacion\": \"10/27/1998\",\r\n            \"calificacion\": 6.4,\r\n            \"personajes\": null,\r\n            \"generos\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Musical\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"drama\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 3,\r\n                    \"nombre\": \"aventuras\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 4,\r\n                    \"nombre\": \"familiar\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"imagen\": \"https://m.media-amazon.com/images/M/MV5BOGZiMDQ1YTQtMGVlOC00OTJiLWFkYzMtYjdiYmY0NWM5YzVjXkEyXkFqcGdeQXVyOTg4MDk3MTQ@._V1_FMjpg_UX1000_.jpg\",\r\n            \"titulo\": \"El rey leon 3\",\r\n            \"fechaDeCreacion\": null,\r\n            \"calificacion\": 6.5,\r\n            \"personajes\": null,\r\n            \"generos\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Musical\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"drama\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 3,\r\n                    \"nombre\": \"aventuras\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                },\r\n                {\r\n                    \"id\": 4,\r\n                    \"nombre\": \"familiar\",\r\n                    \"imagen\": \"https://cdn.slidesharecdn.com/ss_thumbnails/historiadelcineinfantil-161027122213-thumbnail-4.jpg?cb=1477570943\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalles de personaje",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters/details/75",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"details",
+								"75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda de personajes por nombre y pelicula",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/?name=1&movies=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "1"
+								},
+								{
+									"key": "movies",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalles de peliculas 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/details/75",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"details",
+								"75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda por titulo y genero, orden ASC",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/?name=El rey leon&genre=1&order=otroOrden",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "El rey leon"
+								},
+								{
+									"key": "genre",
+									"value": "1"
+								},
+								{
+									"key": "order",
+									"value": "otroOrden"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta con test para el endpoint /characters",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZUBtYWlsLmNvbSIsImV4cCI6MTY2NTY5MjM0MCwiaWF0IjoxNjY1Njg4NzQwfQ.-NPe5__A4d1Wjzb89td13E4NFLhDDYE7dbXSwtuZQhw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
